@@ -28,3 +28,9 @@ jobs:
       uses: goreleaser/goreleaser-action@v2.6.1
       with:
         args: release --rm-dist
+        
+    - name: Upload assets
+      uses: actions/upload-artifact@v2
+      with:
+        name: myapp
+        path: dist/*
