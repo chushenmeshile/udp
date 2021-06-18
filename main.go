@@ -12,7 +12,7 @@ import (
 func main() {
 	var port int
 	var ip string
-	flag.IntVar(&port,"port",7200,"监听端口,默认值30000")
+	flag.IntVar(&port,"port",30000,"监听端口,默认值30000")
 	flag.StringVar(&ip,"ip","","监听地址")
 	flag.Parse()
 	conn, err := net.Dial("udp", ip+":"+strconv.Itoa(port))
